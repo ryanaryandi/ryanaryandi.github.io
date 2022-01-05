@@ -10,6 +10,9 @@
     <!-- Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" />
 
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -48,7 +51,7 @@
     <section class="jumbotron text-center">
       <img src="img/Ryan.jpg" alt="Ryan Aryandi" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Ryan Aryandi</h1>
-      <p class="lead">Sistem Informasi | Fresh Graduate</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -68,10 +71,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right">
             <p>Lulusan S1 Sistem Informasi Universitas AMIKOM Purwokerto. Memiliki kemampuan dasar dalam bidang pemrograman yaitu, HTML, PHP, CSS, CodeIgniter, JavaScript, Bootstrap.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-delay="300">
             <p>
               Saya Juga memiliki kemampuan dasar dalam bidang desain dan editing yaitu, Adobe Premiere Pro, Adobe After Effect, CorelDraw, Adobe Photoshop. Saya adalah orang yang bertanggung jawab dan dapat diandalkan. Mencari kerja untuk
               semakin berkembang dan bertumbuh bersama.
@@ -99,7 +102,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-up" data-aos-duration="500">
             <div class="card">
               <img src="img/sekolah/smp.jpg" class="card-img-top" alt="SMPN 3 Banjar" />
               <div class="card-body">
@@ -111,7 +114,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-up" data-aos-duration="500" data-aos-delay="100">
             <div class="card">
               <img src="img/sekolah/sma.jpg" class="card-img-top" alt="SMAN 1 Banjar" />
               <div class="card-body">
@@ -124,7 +127,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-up" data-aos-duration="500" data-aos-delay="200">
             <div class="card">
               <img src="img/sekolah/amikom.JPG" class="card-img-top" alt="Universitas AMIKOM Purwokerto" />
               <div class="card-body">
@@ -206,6 +209,26 @@
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- JavaScript AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+        duration: 2000,
+      });
+    </script>
+
+    <!-- JavaScript GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 2, delay: 1.5, text: "Sistem Informasi | Fresh Graduate" });
+      gsap.from(".jumbotron img", { duration: 1, y: -100, rotateY: 360, opacity: 0 });
+      gsap.from(".navbar", { duration: 1.5, y: "-100%", opacity: 0, ease: "bounce" });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
 
     <!-- JavaScript Google Sheets -->
     <script>
