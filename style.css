@@ -1,4 +1,4 @@
-.jumbotron {
+.jumbotron:after {
   padding-top: 6rem;
   background-color: #f0e880;
 }
