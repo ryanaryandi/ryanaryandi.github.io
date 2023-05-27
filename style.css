@@ -10,3 +10,11 @@
 section {
   padding-top: 5rem;
 }
+
+.navbar li:hover a {
+  transform: translateX(0.2em);
+}
+
+.navbar li:active {
+  background-color: #f0e880;
+}
