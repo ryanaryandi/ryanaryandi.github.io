@@ -3,6 +3,10 @@
   background-color: #f0e880;
 }
 
+.jumbotron img:hover {
+  width: 300px;
+}
+
 #projects {
   background-color: #f0e880;
 }
@@ -17,4 +21,12 @@ section {
 
 .navbar li:active {
   background-color: #f0e880;
+}
+
+#footer img {
+  width: 30px;
+}
+
+#footer img:hover {
+  width: 60px;
 }
